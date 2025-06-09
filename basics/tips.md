@@ -1,6 +1,6 @@
 # Tips and Tricks
 
-Sometimes you may need to implement custom solutions for problems that cannot be solved by native opentrons labware. This is a short document containing a few of the solutions and optimizations we've come across.
+Sometimes you may need to implement custom solutions for problems that cannot be solved by native opentrons labware. Perhaps you might have to implement a solution that the native aspirate, dispense, mix functions cannot handle.  This is a short document containing a few of the solutions and optimizations we've come across.
 # Deletion Trick
 
 The opentrons API does not inherently support stacking labware, meaning two pieces of labware cannot occupy the same slot. This is problematic for lids and other labware that is meant to be stacked. The work around for this is by managing the state of the deck by deleting and reloading labware when two different labware need to be stacked. For example, if you had a lid and an eppendorf rack, you would delete the eppendorf rack from the deck before moving the lid to that slot. In addition, you would need to account for the drop offset since the robot believes that nothing is occupying the deck slot, while physically the rack is still present. 
