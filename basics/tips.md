@@ -129,7 +129,7 @@ custom_location = a1_location.move(Point(30, -70, 0))
 contact_location = a1_location.move(Point(30, -70, -55)) 
 ```
 
-I can define a specific location within the robot, 50 mm above the bottom of the center of well A1 in our tilting reservoir. Then define a new location, custom_location which is offset 30 mm in the x direction, and -70 mm in the y direction. Afterwards, I can create new location to move downwards 55 mm.
+I can define a specific location within the robot, 50 mm above the bottom of the center of well A1 in our tilting reservoir. Then define a new location, custom_location which is offset 30 mm in the x direction, and -70 mm in the y direction. Afterwards, I can create a new location to move downwards 55 mm.
 
 ```python
 right_pipette.move_to(custom_location)
