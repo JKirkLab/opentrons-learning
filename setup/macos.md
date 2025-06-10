@@ -54,7 +54,7 @@ https://opentrons.com/ot-app
 
 ## VS Code
 
-This is not necessarily the code editor that you need to use, but I am most used to using. Any code editor will suffice. 
+This is not necessarily the code editor that you need to use, but the one I am most used to using. Any code editor will suffice. 
 
 ### 1. Download VS Code through the following link
 https://code.visualstudio.com/download
