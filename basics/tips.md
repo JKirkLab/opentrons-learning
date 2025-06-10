@@ -114,7 +114,7 @@ As a side note, A1 is refers to the farthest channel on the pipette nozzle towar
 
 There may be scenarios where basic API functions defined by opentrons do not fully satisfy the needs of a protocol. For example, using the pipette nozzle head to come into contact with a dynamic piece of labware. In these scenarios, working with reference points is especially important. 
 
-It is important to understand that the reference point changes depending on the nozzle configuration for the pipette. If you configure the nozzle to begin in full column mode, the reference point will sit between channels D and E. If it is configured in single channel mode, the reference point will be directly on the single specific channel that is specific as the start. 
+It is important to understand that the reference point changes depending on the nozzle configuration for the pipette. If you configure the nozzle to begin in full column mode, the reference point will sit between channels D and E. If it is configured in single channel mode, the reference point will be directly on the channel specified in the start parameter.
 
 
 ```python
