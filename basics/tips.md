@@ -161,3 +161,13 @@ Ensure that the flowrate of your aspiration and dispense steps adhere to a overa
 ### Tip Usage is important 
 
 We try to optimize tip usage when possible -- when writing protocols, think about ways to optimize tip usage such that you use the least amount of tips possible. For example, if you need to dilute samples with water like in the BCA Assay, use a singular tip to insert all of the water steps first, then use clean tips to insert each sample. Additionally, when testing protocols, use the tip boxes labeled test boxes in order to save clean tips for real experiments. 
+
+
+### Viscosity
+
+Every so often we might encounter particularly viscous liquids that behave oddly when pipetted. For small liquid volumes (0.5 uL to 2 uL), it is important that we account for such properties if the assay to be automated uses these samples. Small liquid volumes will often stick to the tip of the pipette, even with a manually set push_out parameter. The most consistent way I've found to get around this is by lowering the dispense height such that it contacts the bottom of the well and overcomes adhesion and surface tension. This can be done as follows:
+
+```python
+dispense_depth = labware['well_plate'][f"{protocol.params.origin_well_row}{well_column-i}"].bottom(z=0.05)
+left_pipette.move_to(dispense_depth)
+```
